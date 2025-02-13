@@ -87,7 +87,7 @@ const CommentsContainer = () => {
   ];
 
   const Comment = ({ data }) => {
-    const { name, text, replies } = data;
+    const { name, text } = data;
     return (
       <div className="flex shadow-sm bg-gray-100 my-2 items-center">
         <img className="h-8 w-8" alt="user" src="../usericon.png"></img>
@@ -101,10 +101,10 @@ const CommentsContainer = () => {
 
   const CommentsLists = ({ comments }) => {
     return comments.map((comment, ind) => (
-      <div>
+      <div key={ind * Math.random(1, 99)}>
         <Comment data={comment} key={ind} />
         <div className="pl-5 border border-l-black">
-          <CommentsLists comments={comment.replies} />
+          <CommentsLists key={ind} comments={comment.replies} />
         </div>
       </div>
     ));

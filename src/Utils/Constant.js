@@ -5,3 +5,5 @@ export const YOUTUBE_VIDEOS_API =
 
 export const YOUTUBE_SEARCHQUERY_API =
   "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
+
+export const LIVECHAT_COUNT = 10;
