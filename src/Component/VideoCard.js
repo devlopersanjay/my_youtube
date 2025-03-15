@@ -24,7 +24,10 @@ export const ADVideoCard = ({ video }) => {
   const { snippet, statistics } = video;
   const { channelTitle, title, thumbnails } = snippet;
   return (
-    <div className="p-2 m-1 w-64 border border-gray-400 shadow-sm">
+    <div className="p-2 m-1 w-64 border border-gray-400 shadow-sm relative">
+      <span className="absolute left-2 rounded-sm bg-black text-white px-2">
+        adv...
+      </span>
       <img
         className="rounded-lg"
         src={thumbnails.medium.url}
